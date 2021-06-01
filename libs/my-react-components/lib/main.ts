@@ -1,1 +1,1 @@
-export const HELLO_THERE = 99;
+export const HELLO_THERE = "^_^";

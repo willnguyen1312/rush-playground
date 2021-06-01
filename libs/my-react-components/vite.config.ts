@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "lib/main.ts"),
-      name: "Shared",
+      name: "my-react-components",
     },
   },
 });

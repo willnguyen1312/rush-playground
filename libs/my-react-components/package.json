@@ -5,12 +5,12 @@
     "dist"
   ],
   "typings": "dist/main.d.ts",
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "main": "./dist/my-react-components.umd.js",
+  "module": "./dist/my-react-components.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "import": "./dist/my-react-components.es.js",
+      "require": "./dist/my-react-components.umd.js"
     }
   },
   "scripts": {
