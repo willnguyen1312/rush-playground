@@ -3,9 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   '@rush-temp/my-components': file:./projects/my-components.tgz
   '@rush-temp/my-react-app': file:./projects/my-react-app.tgz
+  '@rush-temp/my-react-components': file:./projects/my-react-components.tgz
   '@size-limit/preset-small-lib': ^4.11.0
   '@vitejs/plugin-react-refresh': ^1.3.1
   husky: ^6.0.0
+  npm-run-all: ^4.1.5
+  rollup-plugin-typescript2: 0.30.0
   size-limit: ^4.11.0
   tsdx: ^0.14.1
   tslib: ^2.2.0
@@ -14,9 +17,12 @@ specifiers:
 dependencies:
   '@rush-temp/my-components': file:projects/my-components.tgz
   '@rush-temp/my-react-app': file:projects/my-react-app.tgz
+  '@rush-temp/my-react-components': file:projects/my-react-components.tgz
   '@size-limit/preset-small-lib': 4.11.0_size-limit@4.11.0
   '@vitejs/plugin-react-refresh': 1.3.3
   husky: 6.0.0
+  npm-run-all: 4.1.5
+  rollup-plugin-typescript2: 0.30.0
   size-limit: 4.11.0
   tsdx: 0.14.1
   tslib: 2.2.0
@@ -1420,6 +1426,16 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.3.0
       rollup: 1.32.1
+    dev: false
+
+  /@rollup/pluginutils/4.1.0:
+    resolution: {integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.0
     dev: false
 
   /@sinonjs/commons/1.8.3:
@@ -3818,6 +3834,10 @@ packages:
     resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
     dev: false
 
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+    dev: false
+
   /esutils/2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
@@ -5785,6 +5805,11 @@ packages:
       readable-stream: 2.3.7
     dev: false
 
+  /memorystream/0.3.1:
+    resolution: {integrity: sha1-htcJCzDORV1j+64S3aUaR93K+bI=}
+    engines: {node: '>= 0.10.0'}
+    dev: false
+
   /merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: false
@@ -6067,6 +6092,22 @@ packages:
   /normalize-url/4.5.1:
     resolution: {integrity: sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /npm-run-all/4.1.5:
+    resolution: {integrity: sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==}
+    engines: {node: '>= 4'}
+    hasBin: true
+    dependencies:
+      ansi-styles: 3.2.1
+      chalk: 2.4.2
+      cross-spawn: 6.0.5
+      memorystream: 0.3.1
+      minimatch: 3.0.4
+      pidtree: 0.3.1
+      read-pkg: 3.0.0
+      shell-quote: 1.7.2
+      string.prototype.padend: 3.1.2
     dev: false
 
   /npm-run-path/2.0.2:
@@ -6449,6 +6490,12 @@ packages:
   /picomatch/2.3.0:
     resolution: {integrity: sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==}
     engines: {node: '>=8.6'}
+    dev: false
+
+  /pidtree/0.3.1:
+    resolution: {integrity: sha512-qQbW94hLHEqCg7nhby4yRC7G2+jYHY4Rguc2bjw7Uug4GIJuu1tvf2uHaZv5Q8zdt+WKJ6qK1FOI6amaWUo5FA==}
+    engines: {node: '>=0.10'}
+    hasBin: true
     dev: false
 
   /pify/3.0.0:
@@ -7443,6 +7490,33 @@ packages:
       typescript: 3.9.9
     dev: false
 
+  /rollup-plugin-typescript2/0.30.0:
+    resolution: {integrity: sha512-NUFszIQyhgDdhRS9ya/VEmsnpTe+GERDMmFo0Y+kf8ds51Xy57nPNGglJY+W6x1vcouA7Au7nsTgsLFj2I0PxQ==}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.1.0
+      find-cache-dir: 3.3.1
+      fs-extra: 8.1.0
+      resolve: 1.20.0
+      tslib: 2.1.0
+    dev: false
+
+  /rollup-plugin-typescript2/0.30.0_typescript@4.3.2:
+    resolution: {integrity: sha512-NUFszIQyhgDdhRS9ya/VEmsnpTe+GERDMmFo0Y+kf8ds51Xy57nPNGglJY+W6x1vcouA7Au7nsTgsLFj2I0PxQ==}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.1.0
+      find-cache-dir: 3.3.1
+      fs-extra: 8.1.0
+      resolve: 1.20.0
+      tslib: 2.1.0
+      typescript: 4.3.2
+    dev: false
+
   /rollup-pluginutils/2.8.2:
     resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
     dependencies:
@@ -7645,6 +7719,10 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: false
+
+  /shell-quote/1.7.2:
+    resolution: {integrity: sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==}
     dev: false
 
   /shelljs/0.8.4:
@@ -7954,6 +8032,15 @@ packages:
       internal-slot: 1.0.3
       regexp.prototype.flags: 1.3.1
       side-channel: 1.0.4
+    dev: false
+
+  /string.prototype.padend/3.1.2:
+    resolution: {integrity: sha512-/AQFLdYvePENU3W5rgurfWSMU6n+Ww8n/3cUt7E+vPBB/D7YDG8x+qjoFs4M/alR2bW7Qg6xMjVwWUOvuQ0XpQ==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      call-bind: 1.0.2
+      define-properties: 1.1.3
+      es-abstract: 1.18.3
     dev: false
 
   /string.prototype.trimend/1.0.4:
@@ -8403,6 +8490,10 @@ packages:
 
   /tslib/2.0.1:
     resolution: {integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==}
+    dev: false
+
+  /tslib/2.1.0:
+    resolution: {integrity: sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==}
     dev: false
 
   /tslib/2.2.0:
@@ -8960,7 +9051,7 @@ packages:
     dev: false
 
   file:projects/my-react-app.tgz:
-    resolution: {integrity: sha512-/jLrkIzOZfJEMmFKbi6xzhnFwGtlA+K6eRX0vyE6eIN2i8ZJeEJQonKAj0X19LKNpks1/YQIheoFSjBMddk0UA==, tarball: file:projects/my-react-app.tgz}
+    resolution: {integrity: sha512-20k9djz/icztGET6/ooAQx3Vk22s6/4ZjA24oAEUv+9rotwfi4D17RjRdDrP79QwTffrpU1aAXLuUFTIYJgtOg==, tarball: file:projects/my-react-app.tgz}
     name: '@rush-temp/my-react-app'
     version: 0.0.0
     dependencies:
@@ -8972,5 +9063,24 @@ packages:
       typescript: 4.3.2
       vite: 2.3.5
     transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  file:projects/my-react-components.tgz:
+    resolution: {integrity: sha512-/7inLEGGCk11srmFbPYXsnm7bFoheX5YY62TqV0ZsZ73QfMx7uYV+rmtDh+QpLBBsWEedFjBv2XkoCDEF9WuTQ==, tarball: file:projects/my-react-components.tgz}
+    name: '@rush-temp/my-react-components'
+    version: 0.0.0
+    dependencies:
+      '@types/react': 17.0.8
+      '@types/react-dom': 17.0.5
+      '@vitejs/plugin-react-refresh': 1.3.3
+      npm-run-all: 4.1.5
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      rollup-plugin-typescript2: 0.30.0_typescript@4.3.2
+      typescript: 4.3.2
+      vite: 2.3.5
+    transitivePeerDependencies:
+      - rollup
       - supports-color
     dev: false

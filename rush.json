@@ -396,6 +396,10 @@
     {
       "packageName": "my-components",
       "projectFolder": "libs/my-components"
+    },
+    {
+      "packageName": "my-react-components",
+      "projectFolder": "libs/my-react-components"
     }
     // {
     //   /**
