@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && pnpm type",
+    "build": "tsc && vite build && npm run type",
     "build:watch": "npm-run-all -p lib:watch type:watch",
     "serve": "vite preview",
     "lib:watch": "vite build --watch",
